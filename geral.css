@@ -1,0 +1,259 @@
+:root {
+    --dark-green: #375330; 
+    --logo-color: #597d51; 
+    --text-color: #375330; 
+    --input-bg: #e0e0e0;
+
+
+
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.header {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+
+.logo-placeholder {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--logo-color); 
+    border: 2px solid white;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5em;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    top: -5px; 
+}
+.logo-text-small {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+
+
+
+.ajuda-text {
+    font-size: 1.5em;
+    color: white;
+}
+
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid white;
+    margin-left: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px 5%;
+    text-align: center;
+    position: relative;
+}
+
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.hat-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-190%); 
+    top: -15px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--hat-color-dark) 40%, var(--hat-color-light) 60%);
+    border-radius: 50% 50% 0 0;
+    opacity: 0.9;
+}
+
+
+.help-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0 10px;
+}
+
+
+
+.firefighter-image {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 130px; 
+    height: 130px;
+    
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    border-radius: 5px;
+    
+}
+
+
+
+.search-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+
+.search-input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-bg); 
+    font-size: 1.1em;
+    color: #555;
+    box-sizing: border-box;
+}
+
+
+.search-input::placeholder {
+    color: #777;
+}
+
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #777;
+}
+
+
+.suggestion-box {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    min-height: 200px; 
+    background-color: var(--input-bg); 
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 1.1em;
+}
+
+
+.suggestion-box strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+
+
+
+.footer {
+    background-color: var(--dark-green); 
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+    margin-top: auto;
+    min-height: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+    .help-title {
+        font-size: 1.8em;
+    }
+    .search-container, .suggestion-box {
+        width: 95%;
+    }
+    .firefighter-image {
+        display: none;
+    }
+    .hat-icon {
+        transform: translateX(-150%);
+    }
+}
